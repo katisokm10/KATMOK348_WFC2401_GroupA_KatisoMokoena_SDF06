@@ -33,15 +33,15 @@ img {
     /* Style for a generic button */
     display: block;
     font: inherit;
-    background: #3498db;
+    background: none;
     border: none;
-    color: #ffffff;
+    color: #0c0c0c;
     padding: 0.8rem 1.5rem;
     cursor: pointer;
 }
 .btn:focus {
     /* Add focus styling to the button */
-    outline: 0.2rem auto #3498db;
+    outline: 0.2rem auto none;
 }
 .visually-hidden {
     /* Hide an element visually but still accessible for screen readers */
@@ -74,7 +74,7 @@ img {
 }
 .profile-image img {
     /* Add border radius to the profile image */
-    border-radius: 10%;
+    border-radius: 50%;
 }
 .profile-user-settings,
 .profile-stats,
@@ -86,9 +86,12 @@ img {
 .profile-user-settings {
     /* Adjust margin for the user settings */
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
 }
 .profile-user-name,
-.profile-edit-btn {
+.profile-edit-btn,
+ .profile-settings-btn{
     /* Style for user name and edit button */
     font-size: 2.8rem;
     font-weight: 400;
@@ -98,11 +101,19 @@ img {
     /* Style for the edit button */
     font-size: 1.2rem;
     line-height: 1.6;
-    border: 0.1rem solid #e74c3c;
     border-radius: 0.3rem;
+    border:0.3px solid #8f8787;
     padding: 0 1.8rem;
     margin-left: 1.5rem;
+    transition: background-color 0.3s; /* Add transition for smooth effect */
 }
+
+.profile-edit-btn:active,
+.profile-settings-btn:active { /* Change background color when clicked */
+    background-color: #2980b9;
+}
+
+
 .profile-settings-btn {
     /* Style for additional settings button */
     font-size: 1.6rem;
