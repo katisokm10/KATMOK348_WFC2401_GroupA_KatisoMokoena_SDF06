@@ -6,6 +6,14 @@
 ### Overview
 This CSS code provides styling for a web page with a profile section and a gallery section. It is designed to be responsive and features various components like buttons, user profile information, and a gallery display.
 
+#### Project Structure
+Gallery Section: Styles for a responsive gallery with individual items that display additional information on hover or focus.
+
+Loader: Animation style for a loader, typically used for indicating content loading.
+
+Media Query: Adjustments for smaller screens using a media query, optimizing the layout for better usability on mobile devices.
+
+
 #### Challenges Faced
 
 - **Cross-Browser Compatibility:
