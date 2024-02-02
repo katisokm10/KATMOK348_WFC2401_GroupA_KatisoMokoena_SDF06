@@ -24,4 +24,4 @@ Achieving a seamless responsive design for different screen sizes and devices wa
 
 - **Gallery Item Interaction:
 
-Implementing the interactive behavior of gallery items, especially on hover and focus, required a balance between aesthetics and usability. Fine-tuning the transitions and ensuring accessibility was a prior
+Implementing the interactive behavior of gallery items, especially on hover and focus, required a balance between aesthetics and usability. 
