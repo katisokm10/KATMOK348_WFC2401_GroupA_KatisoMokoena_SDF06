@@ -1,0 +1,257 @@
+/* Base Styles */
+
+:root {
+    font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Global Styles */
+body {
+    /* Set font family and basic styling */
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    min-height: 90vh;
+    background-color: #eaeaea;
+    color: #333333;
+    padding-bottom: 2rem;
+}
+img {
+    /* Ensure images are displayed as blocks */
+    display: inline-block;
+}
+.container {
+    /* Set maximum width for the container and center it */
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+.btn {
+    /* Style for a generic button */
+    display: block;
+    font: inherit;
+    background: #3498db;
+    border: none;
+    color: #ffffff;
+    padding: 0.8rem 1.5rem;
+    cursor: pointer;
+}
+.btn:focus {
+    /* Add focus styling to the button */
+    outline: 0.2rem auto #3498db;
+}
+.visually-hidden {
+    /* Hide an element visually but still accessible for screen readers */
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+}
+
+/* Profile Section */
+.profile {
+    /* Add padding to the profile section */
+    padding: 4rem 0;
+}
+.profile::after {
+    /* Clear float after profile section */
+    content: "";
+    display: block;
+    clear: both;
+}
+.profile-image {
+    /* Style for the profile image */
+    float: left;
+    width: calc(30% - 1rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 2rem;
+}
+.profile-image img {
+    /* Add border radius to the profile image */
+    border-radius: 10%;
+}
+.profile-user-settings,
+.profile-stats,
+.profile-bio {
+    /* Style for various sections within the profile */
+    float: left;
+    width: calc(70% - 2rem);
+}
+.profile-user-settings {
+    /* Adjust margin for the user settings */
+    margin-top: 1rem;
+}
+.profile-user-name,
+.profile-edit-btn {
+    /* Style for user name and edit button */
+    font-size: 2.8rem;
+    font-weight: 400;
+    display: inline-block;
+}
+.profile-edit-btn {
+    /* Style for the edit button */
+    font-size: 1.2rem;
+    line-height: 1.6;
+    border: 0.1rem solid #e74c3c;
+    border-radius: 0.3rem;
+    padding: 0 1.8rem;
+    margin-left: 1.5rem;
+}
+.profile-settings-btn {
+    /* Style for additional settings button */
+    font-size: 1.6rem;
+    margin-left: 0.8rem;
+}
+.profile-stats {
+    /* Style for user statistics */
+    margin-top: 1.8rem;
+}
+.profile-stats li {
+    /* Style for individual stat items */
+    display: inline-block;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-right: 3rem;
+    cursor: pointer;
+}
+.profile-stats li:last-of-type {
+    /* Remove right margin for the last stat item */
+    margin-right: 0;
+}
+.profile-bio {
+    /* Style for the user biography */
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 1.8rem;
+}
+.profile-real-name,
+.profile-stat-count,
+.profile-edit-btn {
+    /* Style for specific elements in the profile */
+    font-weight: 600;
+}
+
+/* Gallery Section */
+.gallery {
+    /* Style for the gallery section */
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.8rem -0.8rem;
+    padding-bottom: 2rem;
+}
+.gallery-item {
+    /* Style for individual items in the gallery */
+    position: relative;
+    flex: 1 0 20rem;
+    margin: 0.8rem;
+    color: #fff;
+    cursor: pointer;
+}
+.gallery-item:hover .gallery-item-info,
+.gallery-item:focus .gallery-item-info {
+    /* Display gallery item info on hover or focus */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.gallery-item-info {
+    /* Style for gallery item info */
+    display: none;
+}
+.gallery-item-info li {
+    /* Style for individual items in gallery info */
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.gallery-item-likes {
+    /* Adjust margin for likes in gallery */
+    margin-right: 2rem;
+}
+.gallery-item-type {
+    /* Style for gallery item type */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 2rem;
+    text-shadow: 0.2rem 0.2rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.fa-clone,
+.fa-comment {
+    /* Rotate font awesome icons */
+    transform: rotateY(180deg);
+}
+.gallery-image {
+    /* Style for gallery images */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Loader */
+.loader {
+    /* Style for loader animation */
+    width: 4rem;
+    height: 4rem;
+    border: 0.4rem solid #555;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    margin: 0 auto;
+    animation: loader 400ms linear infinite;
+}
+
+/* Media Query */
+@media screen and (max-width: 35rem) {
+    /* Adjustments for smaller screens */
+    .profile {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 2.5rem 0;
+    }
+    .profile::after {
+        display: none;
+    }
+    .profile-image,
+    .profile-user-settings,
+    .profile-bio,
+    .profile-stats {
+        /* Adjust styling for smaller screens */
+        float: none;
+        width: auto;
+    }
+    .profile-image img {
+        /* Adjust size for profile image on smaller screens */
+        width: 6.5rem;
+    }
+    .profile-user-settings {
+        /* Adjust styling for user settings on smaller screens */
+        flex-basis: calc(100% - 9.5rem);
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 1rem;
+    }
+    .profile-user-name {
+        /* Adjust font size for user name on smaller screens */
+        font-size: 1.8rem;
+    }
+    .profile-edit-btn {
+        /* Adjust styling for edit button on smaller screens */
+        order: 1;
+        padding: 0;
+        text-align: center;
+        margin-top: 1rem;
+    }
+   
+}
